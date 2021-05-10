@@ -1,0 +1,127 @@
+---
+- name: Gather facts about all Scopes
+  oneview_scope_facts:
+    config: "{{ config }}"
+  delegate_to: localhost
+
+- name: Create a Server Profile from a Server Profile Template
+  oneview_server_profile:
+    config: "{{ config }}"
+    data:
+      serverProfileTemplateName: "{{ ov_template }}"
+      name: "{{ inventory_hostname }}"
+      description: "{{ server_profile_description }}"
+      # User should set initialScopeUris in case of scoped user
+      initialScopeUris:
+        - "{{ scopes[0].uri }}"
+    params: # Supported only in API version >= 600
+      force: True
+  delegate_to: localhost
+  register: result
+
+- debug: msg= "{{ result.msg }}"
+
+- debug: var=server_profile
+- debug: var=serial_number
+- debug: var=server_hardware
+- debug: var=compliance_preview
+- debug: var=created
+
+- name: Create a Server Profile with connections
+  oneview_server_profile:
+    config: "{{ config }}"
+    data:
+      name: "{{ inventory_hostname }}-with-connections"
+      serverHardwareTypeName: "{{ server_hardware_type_name }}"
+      connectionSettings:  # Supported only in API version >= 600.
+        connections:
+          - id: 1
+            name: connection1
+            functionType: Ethernet
+            portId: Auto
+            requestedMbps: 2500
+            networkName: "{{ network_name }}"
+  delegate_to: localhost
+
+- debug: msg = "{{ server_profile }}"
+
+- name: Update Server Profile
+  oneview_server_profile:
+    config: "{{ config }}"
+    state: "present"
+    data:
+      name: "{{ inventory_hostname }}"
+      affinity: "BayAndServer"
+      bootMode:
+        manageMode: True
+        mode: "UEFI"
+        pxeBootPolicy: "Auto"
+  delegate_to: localhost
+  register: result
+
+- debug: msg = "{{result.msg}}"
+
+- debug: var=server_profile
+
+- name: Remediate compliance issues
+  oneview_server_profile:
+    config: "{{ config }}"
+    state: "compliant"
+    data:
+      name: "{{ inventory_hostname }}"
+  delegate_to: localhost
+  register: result
+
+- debug: msg = "{{ result.msg }}"
+
+- name: Delete the Server Profile created from a Server Profile Template
+  oneview_server_profile:
+    config: "{{ config }}"
+    state: "absent"
+    data:
+      name: "{{ inventory_hostname }}"
+  delegate_to: localhost
+  register: result
+
+- debug: msg = "{{ result.msg }}"
+
+- name: Delete the Server Profile created with connections
+  oneview_server_profile:
+    config: "{{ config }}"
+    state: "absent"
+    data:
+      name: "{{ inventory_hostname }}-with-connections"
+  delegate_to: localhost
+
+- debug: msg = "{{ result.msg }}"
+
+- name: Create Server Profile without specifying a template
+  oneview_server_profile:
+    config: "{{ config }}"
+    data:
+      name: "{{ inventory_hostname }}"
+      serverHardwareTypeName: "{{ server_hardware_type_name }}"
+      enclosureGroupName: "{{ enclosure_group_name }}"
+      description: "{{ server_profile_description }}"
+  delegate_to: localhost
+
+- debug: var=server_profile
+
+- name: Unassign Server Hardware from Server Profile
+  oneview_server_profile:
+    config: "{{ config }}"
+    # This is required for unassigning a SH, or creating a SP and not auto-assigning a SH
+    auto_assign_server_hardware: False
+    data:
+      name: "{{ inventory_hostname }}"
+      # Specify a blank serverHardwareName or serverHardwareUri when auto_assign_server_hardware is False to unassign a SH
+      serverHardwareName:
+  delegate_to: localhost
+
+- name: Delete the Server Profile
+  oneview_server_profile:
+    config: "{{ config }}"
+    state: "absent"
+    data:
+      name: "{{ inventory_hostname }}"
+  delegate_to: localhost

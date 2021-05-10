@@ -1,0 +1,9 @@
+---
+# defaults file for oneview_server_profile
+config: "~/.ansible/collections/ansible_collections/hpe/oneview/roles/oneview_server_profile/files/oneview_config.json"
+ov_template:  Test_spt-1
+inventory_hostname: SPT-test
+server_profile_description: Test SP
+enclosure_group_name: EG
+server_hardware_type_name: SY 480 Gen10 1
+network_name: mgmt_nw

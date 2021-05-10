@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  role_name: oneview_server_profile
+  author: Asis Bagga
+  description: Ansible role to manage OneView Server Profile resource.
+  company: Hewlett Packard Enterprise
+  license: Apache
+  min_ansible_version: 2.9
+  min_python_version: 2.7.9
+  platforms: []
+  galaxy_tags:
+    - ansible
+    - hpe-oneview
+    - ansible-modules
+    - sdk
+dependencies: []
