@@ -9,7 +9,7 @@
     config: "{{ config }}"
     data:
       serverProfileTemplateName: "{{ ov_template }}"
-      name: "{{ inventory_hostname }}"
+      name: "{{ sp_name }}"
       description: "{{ server_profile_description }}"
       # User should set initialScopeUris in case of scoped user
       initialScopeUris:
@@ -31,7 +31,7 @@
   oneview_server_profile:
     config: "{{ config }}"
     data:
-      name: "{{ inventory_hostname }}-with-connections"
+      name: "{{ sp_name }}-with-connections"
       serverHardwareTypeName: "{{ server_hardware_type_name }}"
       connectionSettings:  # Supported only in API version >= 600.
         connections:
@@ -50,7 +50,7 @@
     config: "{{ config }}"
     state: "present"
     data:
-      name: "{{ inventory_hostname }}"
+      name: "{{ sp_name }}"
       affinity: "BayAndServer"
       bootMode:
         manageMode: True
@@ -68,7 +68,7 @@
     config: "{{ config }}"
     state: "compliant"
     data:
-      name: "{{ inventory_hostname }}"
+      name: "{{ sp_name }}"
   delegate_to: localhost
   register: result
 
@@ -79,7 +79,7 @@
     config: "{{ config }}"
     state: "absent"
     data:
-      name: "{{ inventory_hostname }}"
+      name: "{{ sp_name }}"
   delegate_to: localhost
   register: result
 
@@ -90,7 +90,7 @@
     config: "{{ config }}"
     state: "absent"
     data:
-      name: "{{ inventory_hostname }}-with-connections"
+      name: "{{ sp_name }}-with-connections"
   delegate_to: localhost
 
 - debug: msg = "{{ result.msg }}"
@@ -99,7 +99,7 @@
   oneview_server_profile:
     config: "{{ config }}"
     data:
-      name: "{{ inventory_hostname }}"
+      name: "{{ sp_name }}"
       serverHardwareTypeName: "{{ server_hardware_type_name }}"
       enclosureGroupName: "{{ enclosure_group_name }}"
       description: "{{ server_profile_description }}"
@@ -113,7 +113,7 @@
     # This is required for unassigning a SH, or creating a SP and not auto-assigning a SH
     auto_assign_server_hardware: False
     data:
-      name: "{{ inventory_hostname }}"
+      name: "{{ sp_name }}"
       # Specify a blank serverHardwareName or serverHardwareUri when auto_assign_server_hardware is False to unassign a SH
       serverHardwareName:
   delegate_to: localhost
@@ -123,5 +123,5 @@
     config: "{{ config }}"
     state: "absent"
     data:
-      name: "{{ inventory_hostname }}"
+      name: "{{ sp_name }}"
   delegate_to: localhost

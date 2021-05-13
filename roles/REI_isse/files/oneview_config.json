@@ -2,8 +2,7 @@
     "ip": "10.1.19.63",
     "credentials": {
       "userName": "Administrator",
-      "password": "admin123",
-      "authLoginDomain": ""
+      "password": "admin123"
 },
     "image_streamer_ip": "",
     "api_version": 2800,

@@ -1,0 +1,6 @@
+---
+- hosts: all
+  collections:
+    - hpe.oneview
+  roles:
+    - hpe.oneview.REI_isse
