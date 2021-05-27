@@ -20,36 +20,6 @@
       name: "{{ sp_name }}"
       serverProfileTemplateName: "{{ server_profile_template }}"
       serverHardwareName: "{{ server_hardware_name }}"
-       connectionSettings:
-         connections:
-           - id: 1
-             name: Deployment Network A
-             functionType: Ethernet
-             portId: Mezz 3:1-a
-             requestedMbps: 2500
-             networkName: iscsi
-             boot:
-               priority: Primary
-               ethernetBootType: iSCSI
-               iscsi:
-                 initiatorNameSource: ProfileInitiatorName
-           - id: 2
-             name: Deployment Network B
-             functionType: Ethernet
-             portId: Mezz 3:2-a
-             requestedMbps: 2500
-             networkName: iscsi
-             boot:
-               priority: Secondary
-               ethernetBootType: iSCSI
-               iscsi:
-                 initiatorNameSource: ProfileInitiatorName
-           - id: 3
-             name: connection1
-             functionType: Ethernet
-             portId: Auto
-             requestedMbps: 2500
-             networkUri: "{{ network_info['ansible_facts']['network_sets'][0]['uri'] }}"
       osDeploymentSettings:
         osDeploymentPlanName: "{{ osdp }}"
         osCustomAttributes:
@@ -85,16 +55,16 @@
             value: "{{ vlanid }}"
   delegate_to: localhost
 
- - name: Power on the ESXi server
-   oneview_server_hardware:
-     hostname: "{{ ov_hostname }}"
-     username: "{{ ov_username }}"
-     password: "{{ cpqmonpassword }}"
-     api_version: "{{ ov_api_version}}"
-     state: power_state_set
-     data:
-       name : "{{ server_hardware_name }}"
-       powerStateData:
-         powerState: "On"
-         powerControl: "MomentaryPress"
-   delegate_to: localhost
+- name: Power on the ESXi server
+  oneview_server_hardware:
+    hostname: "{{ ov_hostname }}"
+    username: "{{ ov_username }}"
+    password: "{{ cpqmonpassword }}"
+    api_version: "{{ ov_api_version}}"
+    state: power_state_set
+    data:
+      name : "{{ server_hardware_name }}"
+      powerStateData:
+        powerState: "On"
+        powerControl: "MomentaryPress"
+  delegate_to: localhost

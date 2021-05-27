@@ -1,22 +1,21 @@
 ---
 # defaults file for oneview_server_profile
 config: "~/.ansible/collections/ansible_collections/hpe/oneview/roles/REI_server_profile_os_attributes/files/oneview_config.json"
-ov_template:  Test_spt-1
 enclosure_group_name: EG
 server_hardware_type_name: SY 480 Gen10 1
 
-server_profile_template: test-spt2
+server_profile_template: test-spt
 ov_hostname: 10.1.19.63
 ov_username: Administrator
 cpqmonpassword: admin123
-ov_api_version: 2800
+ov_api_version: 3000
 sp_name: sp1
 osdp: Deploy-HPE-Esxi-6.2-U2
 server_hardware_name: "0000A66101, bay 11"
 network_set_name: ns1
 hostName: testhost
 domainName: testsdk.com
-vlanid: 201
+vlanid: 202
 mgmt_ip: 192.168.100.11
 netmask: 255.255.255.0
 gateway: 192.168.100.1
