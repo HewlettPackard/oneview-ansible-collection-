@@ -5,7 +5,7 @@
     "password": "<password>",
     "authLoginDomain": "<domain_directory>"
 },
-  "api_version": 5400,
+  "api_version": 5200,
   "variant": "Synergy"
 }
   

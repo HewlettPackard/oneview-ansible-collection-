@@ -4,10 +4,10 @@ This collection provides a series of Ansible modules and plugins for interacting
 
 ## Build Status 
 
-OV Version | 8.40 | 8.30  | 8.20  | 8.10  | 8.00  | 7.20 | 7.10 | 7.00 | 6.60 | 6.50 | 6.40 | 6.30 | 6.20 | 6.10 | 6.00 | 5.60 | 
-| -------------:|-------------:| -------------:| -------------:|:-------------:| -------------:| -------------:| -------------:| -------------:| -------------:| -------------:| -------------:|-------------:|-------------:|-------------:|-------------:|-------------:|
-SDK Version/Tag | [v8.4.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v8.4.0)|[v8.3.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v8.3.0)| [v8.2.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v8.2.0)| [v8.1.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v8.1.0)| [v8.0.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v8.0.0)| [v7.2.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v7.2.0)| [v7.1.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v7.1.0)| [v7.0.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v7.0.0)| [v6.6.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.6.0)| [v6.5.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.5.0)| [v6.4.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.4.0) | [v6.3.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.3.0) | [v6.2.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.2.0) | [v6.1.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.1.0) | [v6.0.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.0.0) | [v1.2.1](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v1.2.1) |
-Build Status | [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/4423268452)|[![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/4423268452)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/4279415399)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/3728995924)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/3442614641)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/2968933264)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/2689579339)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/2306414699)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/2021346524)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/1666302716)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/1474959987)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/1208451472)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/1025475033)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/728874027)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/632343827)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml)|
+OV Version| 8.30  | 8.20  | 8.10  | 8.00  | 7.20 | 7.10 | 7.00 | 6.60 | 6.50 | 6.40 | 6.30 | 6.20 | 6.10 | 6.00 | 5.60 | 
+| -------------:|-------------:| -------------:| -------------:|:-------------:| -------------:| -------------:| -------------:| -------------:| -------------:| -------------:| -------------:|-------------:|-------------:|-------------:|-------------:|
+SDK Version/Tag | [v8.3.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v8.3.0)| [v8.2.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v8.2.0)| [v8.1.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v8.1.0)| [v8.0.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v8.0.0)| [v7.2.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v7.2.0)| [v7.1.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v7.1.0)| [v7.0.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v7.0.0)| [v6.6.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.6.0)| [v6.5.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.5.0)| [v6.4.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.4.0) | [v6.3.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.3.0) | [v6.2.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.2.0) | [v6.1.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.1.0) | [v6.0.0](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v6.0.0) | [v1.2.1](https://github.com/HewlettPackard/oneview-ansible-collection/releases/tag/v1.2.1) |
+Build Status | [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/4423268452)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/4279415399)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/3728995924)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/3442614641)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/2968933264)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/2689579339)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/2306414699)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/2021346524)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/1666302716)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/1474959987)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/1208451472)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/1025475033)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/728874027)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/runs/632343827)| [![Build status](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml/badge.svg)](https://github.com/HewlettPackard/oneview-ansible-collection/actions/workflows/.ansible-test.yml)|
 
 
 ## Requirements
@@ -75,7 +75,7 @@ example:
     "authLoginDomain": "",
     "password": "<password>"
   },
-  "api_version": 5400
+  "api_version": 5200
 }
 ```
 
@@ -208,7 +208,7 @@ This option allows the parameters `hostname`, `auth_login_domain`, `username`, `
     username: <username>
     password: <password>
     auth_login_domain: <domain_directory>
-    api_version: 5400
+    api_version: 5200
     state: present
     data:
       name: "{{ network_name }}"
@@ -223,19 +223,19 @@ Setting `no_log: true` is highly recommended in this case, as the credentials ar
 
 ### Setting your OneView version
 
-The Ansible collections for HPE OneView support the API endpoints for HPE OneView  6.00, 6.10, 6.20, 6.30, 6.40, 6.50, 6.60, 7.00, 7.10, 7.20, 8.00, 8.10, 8.20, 8.30, 8.40
+The Ansible collections for HPE OneView support the API endpoints for HPE OneView  6.00, 6.10, 6.20, 6.30, 6.40, 6.50, 6.60, 7.00, 7.10, 7.20, 8.00, 8.10, 8.20, 8.30
 
 The current `default` HPE OneView version will pick the OneView appliance version.
 
 To use a different API, you must set the API version together with your credentials, either using the JSON configuration:
 
 ```json
-"api_version": 5400
+"api_version": 5200
 ```
 OR using the Environment variable:
 
 ```bash
-export ONEVIEWSDK_API_VERSION='5400'
+export ONEVIEWSDK_API_VERSION='5200'
 ```
 
 If this property is not specified, it will fall back to default value.
@@ -257,7 +257,6 @@ The API list is as follows:
 - HPE OneView 8.10 API version: `4800`
 - HPE OneView 8.20 API version: `5000`
 - HPE OneView 8.30 API version: `5200`
-- HPE OneView 8.40 API version: `5400`
 
 
 ### HPE Synergy Image Streamer
