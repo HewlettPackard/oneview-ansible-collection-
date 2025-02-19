@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 ###
-# Copyright (2021) Hewlett Packard Enterprise Development LP
+# Copyright (2021-2024) Hewlett Packard Enterprise Development LP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # You may not use this file except in compliance with the License.
@@ -136,7 +136,7 @@ class ApplianceDeviceSnmpV3TrapDestinationsModule(OneViewModule):
     )
 
     def __init__(self):
-        super().__init__(additional_arg_spec=self.argument_spec, validate_etag_support=True)
+        super().__init__(additional_arg_spec=self.argument_spec, validate_etag_support=True, supports_check_mode=True)
         self.set_resource_object(self.oneview_client.appliance_device_snmp_v3_trap_destinations)
 
     def execute_module(self):
@@ -147,9 +147,15 @@ class ApplianceDeviceSnmpV3TrapDestinationsModule(OneViewModule):
         self.__replace_snmpv3_username_by_userid()
 
         if self.state == 'present':
-            result = self.resource_present(self.RESOURCE_FACT_NAME)
+            if not self.module.check_mode:
+                result = self.resource_present(self.RESOURCE_FACT_NAME)
+            else:
+                result = self.check_resource_present(self.RESOURCE_FACT_NAME)
         elif self.state == 'absent':
-            result = self.resource_absent()
+            if not self.module.check_mode:
+                result = self.resource_absent()
+            else:
+                result = self.check_resource_absent()
 
         if not self.module.params.get("sessionID"):
             self.oneview_client.connection.logout()
